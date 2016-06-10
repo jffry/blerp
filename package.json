@@ -1,12 +1,12 @@
 {
   "name": "blerp",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "http://xkcd.com/1692/",
   "main": "src/index.js",
   "author": "Jeffrey Stanton",
   "license": "MIT",
   "bin": { "blerp": "./src/index.js" },
-  "man": "blerp.1",
+  "man": "doc/blerp.1",
   "preferGlobal": true,
   "dependencies": {
     "chalk": "^1.1.3",
@@ -19,11 +19,11 @@
     "marked-man": "^0.1.5"
   },
   "scripts": {
-    "manpage": "marked-man --name blerp doc/cli.md > blerp.1",
+    "manpage": "marked-man --name blerp doc/cli.md > doc/blerp.1",
     "prepublish": "npm run manpage"
   },
   "files": [
     "src/**/*.js",
-    "blerp.1"
+    "doc/**/*"
   ]
 }
