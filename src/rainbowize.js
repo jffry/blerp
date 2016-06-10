@@ -11,7 +11,7 @@ const COLORS = [
   chalk.black.bgBlue,
   chalk.black.bgMagenta
 ];
-let index = 0;
+let index = -1;
 
 module.exports = function(text) {
   return text.split('').map(t => {

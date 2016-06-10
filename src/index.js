@@ -12,15 +12,11 @@ if (args.f) {
   interceptStdout(rainbowize);
 }
 
+//help! importantly comes _after_ fun mode
 if (args['?'] || args.help) {
   console.log(usage());
   process.exit(0);
 }
-
-
-console.log(args);
-process.exit(0);
-
 
 //attack mode
 if (args.a) {
@@ -34,13 +30,7 @@ if (args.b) {
 
 //count # args
 if (args.c) {
-
+  console.log(args._.length);
 }
 
 
-
-
-
-
-console.log(`test blerp ${EM_DASH} please ignore`);
-console.log(args);
