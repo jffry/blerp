@@ -19,7 +19,7 @@
     "marked-man": "^0.1.5"
   },
   "scripts": {
-    "manpage": "marked-man --name blerp docs/cli.md > blerp.1",
+    "manpage": "marked-man --name blerp doc/cli.md > blerp.1",
     "prepublish": "npm run manpage"
   }
 }
