@@ -1,6 +1,7 @@
 'use strict';
 
 let chalk = require('chalk');
+let ascii = require('./ascii');
 
 const COLORS = [
   chalk.black.bgRed,
@@ -14,7 +15,14 @@ let index = 0;
 
 module.exports = function(text) {
   return text.split('').map(t => {
-    index = (index + 1) % COLORS.length;
-    return COLORS[index](t);
+    if (ascii.isPrintable(t))
+    {
+      index = (index + 1) % COLORS.length;
+      return COLORS[index](t);
+    }
+    else
+    {
+      return t;
+    }
   }).join('');
 };
