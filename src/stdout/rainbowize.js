@@ -1,7 +1,7 @@
 'use strict';
 
 let chalk = require('chalk');
-let ascii = require('./ascii');
+let ascii = require('../ascii');
 
 const COLORS = [
   chalk.black.bgRed,
