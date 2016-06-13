@@ -22,3 +22,19 @@
   -i  IGNORE CASE (LOWER)
   -I  IGNORE CASE (UPPER)
   -S  STEALTH MODE
+
+## SEE ALSO
+
+  blerp(1), blerp(3), blirb(8), blarb(51), blorp(501)(c)(3)
+  
+  FOR EVEN MORE INFO, SEE blarbl(2)(3) AND
+  birb(3ahhaha I'm kidding, just Google it like a normal person.
+
+## BUG REPORTS
+
+  http://www.inaturalist.org/taxa/47744-Hemiptera
+  
+## COPYRIGHT
+
+  GPL(2)(3+) CC-BY/5.0 RV 41.0 LIKE GECKO/BSD4(2) OR BEST OFFER
+  XKCD COMIC #1692 CC-BY-NC 2.5 BY RANADLL MUNROE
