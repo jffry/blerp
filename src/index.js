@@ -6,6 +6,7 @@ var chalk = require('chalk');
 let stdout_intercept = require('intercept-stdout');
 let stdout_rainbowize = require('./stdout/rainbowize');
 let stdout_bees = require('./stdout/bees');
+let stdout_speak = require('./stdout/speak');
 let usage = require('./usage');
 let art = require('./art');
 
@@ -18,26 +19,23 @@ let BYTES_WRITTEN = 0;
 stdout_intercept(function(text)
 {
   BYTES_WRITTEN += text.length;
-  if (args.S) return '';
   text = args.B ? stdout_bees.extraBees(text) : text;
   text = args.b ? stdout_bees.noBees(text) : text;
+  //-q prints output instead of speaking it
+  if (!args.q) {
+    stdout_speak.buffered(text);
+    return '';
+  }
+  //stealth mode prevents ever printing to stdout
+  if (args.S) return '';
   text = args.f ? stdout_rainbowize(text) : text;
   return text ;
 });
 
-
 //help! importantly comes _after_ fun mode
-if (args['?'] || args.help) {
+if (args['?'] || args.help || process.argv.length <= 2) {
   console.log(usage());
-  process.exit(0);
 }
-//also write out help if we did nothing else before the utility ended
-process.on('exit', function()
-{
-  if (BYTES_WRITTEN === 0) {
-    console.log(usage());
-  }
-});
 
 //count # args
 if (args.c) {
@@ -48,8 +46,6 @@ if (args.c) {
 if (args.D) {
   console.log(chalk.white.bold.bgRed(art.deprecated));
 }
-
-
 
 
 
