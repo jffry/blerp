@@ -1,6 +1,6 @@
 {
   "name": "blerp",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "http://xkcd.com/1692/",
   "main": "src/index.js",
   "author": "Jeffrey Stanton",
