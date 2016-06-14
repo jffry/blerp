@@ -7,6 +7,11 @@ let stdout_intercept = require('intercept-stdout');
 let stdout_rainbowize = require('./stdout/rainbowize');
 let stdout_bees = require('./stdout/bees');
 let usage = require('./usage');
+let art = require('./art');
+
+if (args.S) {
+  art.animateStealthBomber();
+}
 
 //do ... fun things to stdout
 let BYTES_WRITTEN = 0;
