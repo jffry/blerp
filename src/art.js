@@ -1,5 +1,12 @@
 'use strict';
 
+exports.deprecated = `
+************************************************
+**  WARNING: THE -D FLAG HAS BEEN DEPRECATED  **
+**  PLEASE RUN  man blerp  FOR DETAILS        **
+************************************************
+`;
+
 /*
 http://www.xcski.com/~ptomblin/planes.txt
 B-2 Stealth Bomber

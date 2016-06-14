@@ -46,12 +46,7 @@ if (args.c) {
 
 //deprecated
 if (args.D) {
-  console.log(chalk.white.bold.bgRed(`
-************************************************
-**  WARNING: THE -D FLAG HAS BEEN DEPRECATED  **
-**  PLEASE RUN  man blerp  FOR DETAILS        **
-************************************************
-`));
+  console.log(chalk.white.bold.bgRed(art.deprecated));
 }
 
 
